@@ -5,6 +5,7 @@
 ## Overview
 
 5 Things is an anti-anxiety tools that walks users through a common anti-anxiety exercise that asks them to stop and name:
+
 - 5 things they can see
 - 4 things they can touch
 - 3 things they can hear
@@ -34,14 +35,14 @@ This app will be for anyone who struggles with anxious thoughts, whether mild or
 - React
 - MySQL
 - Express
-- Client libraries: 
-    - react
-    - react-router
-    - axios
+- Client libraries:
+  - react
+  - react-router
+  - axios
 - Server libraries:
-    - knex
-    - express
-    - tbd for authentification 
+  - knex
+  - express
+  - tbd for authentification
 
 ### APIs
 
@@ -65,7 +66,97 @@ Describe your data and the relationships between them. You can show this visuall
 
 ### Endpoints
 
-List endpoints that your server will implement, including HTTP methods, parameters, and example responses.
+**GET /exercise**
+
+- Get list of previous exercise entries
+
+Parameters:
+
+- user_id
+- exercise questions
+
+Response:
+
+```
+[
+    {
+        "id": 1,
+        "user_id": 1,
+        "location", "home",
+        "rating_before": 5,
+        "see": ["one", "two", "three", "four", "five"],
+        "touch": ["one", "two", "three", "four"],
+        "hear": ["one", "two", "three"],
+        "smell": ["one", "two"],
+        "taste": ["one"],
+        "rating_after": 2,
+    },
+    ...
+]
+```
+
+**POST /exercise**
+
+- Add new exercise entry
+
+Parameters:
+
+- user_id
+- exercise questions
+
+Response:
+
+```
+[
+    {
+        "id": 1,
+        "user_id": 1,
+        "location", "home",
+        "rating_before": 5,
+        "see": ["one", "two", "three", "four", "five"],
+        "touch": ["one", "two", "three", "four"],
+        "hear": ["one", "two", "three"],
+        "smell": ["one", "two"],
+        "taste": ["one"],
+        "rating_after": 2,
+    },
+    ...
+]
+```
+
+**POST /users/register**
+
+- Add a user account
+
+Parameters:
+
+- email: User's email
+- password: User's provided password
+
+Response:
+
+```
+{
+    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
+}
+```
+
+**POST /users/login**
+
+- Login a user
+
+Parameters:
+
+- email: User's email
+- password: User's provided password
+
+Response:
+
+```
+{
+    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
+}
+```
 
 ### Auth
 
@@ -73,8 +164,43 @@ Yes, tbd
 
 ## Roadmap
 
-Scope your project as a sprint. Break down the tasks that will need to be completed and map out timeframes for implementation. Think about what you can reasonably complete before the due date. The more detail you provide, the easier it will be to build.
+- create client with boilerplate pages and routing
+
+- create server with express and routes
+
+- create migrations
+
+- create seeds with pre-filled exercises and users for testing
+
+- deploy server and client
+
+- Feature: Create form for exercise
+    - HTML form
+    - POST endpoint
+
+- Feature: Create user profile with past exercises
+    - Implement page
+    - GET endpoint
+
+- Feature: Homepage
+
+- Feature: Create account
+    - Create form for register page
+    - POST/users/register endpoint
+
+- Feature: Login
+    - Create form for login page
+    - POST/users/login endpoint
+
+- Auth
+    - tbd
+
+- Bug fixes
+
+- DEMO DAY
 
 ## Nice-to-haves
 
-Your project will be marked based on what you committed to in the above document. Under nice-to-haves, you can list any additional features you may complete if you have extra time, or after finishing.
+- forgot password function
+- custom graphics for displaying exercise data
+- additional page that delivers endpoint of randon mindfulness exercise as a quick version of exercise
