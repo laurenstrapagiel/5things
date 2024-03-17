@@ -82,6 +82,7 @@ Response:
     {
         "id": 1,
         "user_id": 1,
+        "date": (timestamp),
         "location", "home",
         "rating_before": 5,
         "see": ["one", "two", "three", "four", "five"],
@@ -111,6 +112,7 @@ Response:
     {
         "id": 1,
         "user_id": 1,
+        "date": (timestamp),
         "location", "home",
         "rating_before": 5,
         "see": ["one", "two", "three", "four", "five"],
@@ -195,6 +197,10 @@ Yes, tbd
 
   - Create form for login page
   - POST/users/login endpoint
+
+- Feature: About page
+
+  - info on how the exercise works and links to mental health resources
 
 - Auth
 
