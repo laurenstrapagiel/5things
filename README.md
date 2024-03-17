@@ -58,7 +58,24 @@ This app will be for anyone who struggles with anxious thoughts, whether mild or
 
 ### Mockups
 
-Provide visuals of your app's screens. You can use tools like Figma or pictures of hand-drawn sketches.
+#### Home Page
+![](./src/assets/mockups/Home_page.png)
+
+#### About Page
+![](./src/assets/mockups/About.png)
+
+#### Login Page
+![](./src/assets/mockups/Login.png)
+
+#### Register Page
+![](./src/assets/mockups/Register.png)
+
+#### Profile Page
+![](./src/assets/mockups/Profile.png)
+
+#### Exercise Page
+![](./src/assets/mockups/Exercise.png)
+
 
 ### Data
 
