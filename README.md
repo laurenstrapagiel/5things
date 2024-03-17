@@ -1,34 +1,59 @@
 # Project Title
 
+5 Things
+
 ## Overview
 
-What is your app? Brief description in a couple of sentences.
+5 Things is an anti-anxiety tools that walks users through a common anti-anxiety exercise that asks them to stop and name:
+- 5 things they can see
+- 4 things they can touch
+- 3 things they can hear
+- 2 things they can smell
+- 1 thing they can taste
 
 ### Problem
 
-Why is your app needed? Background information around any pain points or other reasons.
+Although this anti-anxiety exercise is very useful, if you're feeling very anxious it can be hard to slow your thoughts to do this practice. By entering each step of the exercise into the app, users can be more mindful. It's also difficult to track the exerise's effectiveness over time, but by saving data, users can track progress over time and draw connections between events and anxiety.
 
 ### User Profile
 
-Who will use your app? How will they use it? Any special considerations that your app must take into account.
+This app will be for anyone who struggles with anxious thoughts, whether mild or more severe. Though this app is not a treatment for anxiety, the exercise is useful for everyone.
 
 ### Features
 
-List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe _how_ these features are implemented, only _what_ needs to be implemented.
+- users can create an account to be able to keep a record of all their exercise instances
+- users can review past exercises and look for patterns and improvement
+- app will ask user to fill in each step of the exercise in forms
+- app will ask user to rate their anxiety severity before and after doing the exercise
+- app will ask where the user is during the exercise
 
 ## Implementation
 
 ### Tech Stack
 
-List technologies that will be used in your app, including any libraries to save time or provide more functionality. Be sure to research any potential limitations.
+- React
+- MySQL
+- Express
+- Client libraries: 
+    - react
+    - react-router
+    - axios
+- Server libraries:
+    - knex
+    - express
+    - tbd for authentification 
 
 ### APIs
 
-List any external sources of data that will be used in your app.
+- no external APIs
 
 ### Sitemap
 
-List the pages of your app with brief descriptions. You can show this visually, or write it out.
+- Home page
+- Login
+- Register
+- Exercise
+- User profile
 
 ### Mockups
 
@@ -44,7 +69,7 @@ List endpoints that your server will implement, including HTTP methods, paramete
 
 ### Auth
 
-Does your project include any login or user profile functionality? If so, describe how authentication/authorization will be implemented.
+Yes, tbd
 
 ## Roadmap
 
