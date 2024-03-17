@@ -62,7 +62,7 @@ Provide visuals of your app's screens. You can use tools like Figma or pictures 
 
 ### Data
 
-Describe your data and the relationships between them. You can show this visually using diagrams, or write it out.
+![](../5things/src/assets/mockups/drawSQL-image-export-2024-03-17.png)
 
 ### Endpoints
 
@@ -175,25 +175,30 @@ Yes, tbd
 - deploy server and client
 
 - Feature: Create form for exercise
-    - HTML form
-    - POST endpoint
+
+  - HTML form
+  - POST endpoint
 
 - Feature: Create user profile with past exercises
-    - Implement page
-    - GET endpoint
+
+  - Implement page
+  - GET endpoint
 
 - Feature: Homepage
 
 - Feature: Create account
-    - Create form for register page
-    - POST/users/register endpoint
+
+  - Create form for register page
+  - POST/users/register endpoint
 
 - Feature: Login
-    - Create form for login page
-    - POST/users/login endpoint
+
+  - Create form for login page
+  - POST/users/login endpoint
 
 - Auth
-    - tbd
+
+  - tbd
 
 - Bug fixes
 
@@ -204,3 +209,4 @@ Yes, tbd
 - forgot password function
 - custom graphics for displaying exercise data
 - additional page that delivers endpoint of randon mindfulness exercise as a quick version of exercise
+- add additional notes or thoughts to exercise
