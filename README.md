@@ -62,7 +62,7 @@ Provide visuals of your app's screens. You can use tools like Figma or pictures 
 
 ### Data
 
-![](drawSQL-image-export-2024-03-17.png)
+![](./src/assets/mockups/drawSQL-image-export-2024-03-17.png)
 
 ### Endpoints
 
