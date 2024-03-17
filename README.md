@@ -4,7 +4,7 @@
 
 ## Overview
 
-5 Things is an anti-anxiety tools that walks users through a common anti-anxiety exercise that asks them to stop and name:
+5 Things is an anti-anxiety app that walks users through a common anti-anxiety exercise that asks them to stop and name:
 
 - 5 things they can see
 - 4 things they can touch
