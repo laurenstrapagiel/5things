@@ -42,7 +42,7 @@ This app will be for anyone who struggles with anxious thoughts, whether mild or
 - Server libraries:
   - knex
   - express
-  - tbd for authentification
+ - bcrypt for password hashing
 
 ### APIs
 
@@ -91,6 +91,7 @@ Parameters:
 
 - user_id
 - exercise questions
+- token: JWT used to see personal exercises
 
 Response:
 
@@ -121,6 +122,7 @@ Parameters:
 
 - user_id
 - exercise questions
+- token: JWT
 
 Response:
 
