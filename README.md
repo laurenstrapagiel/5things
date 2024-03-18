@@ -42,7 +42,7 @@ This app will be for anyone who struggles with anxious thoughts, whether mild or
 - Server libraries:
   - knex
   - express
- - bcrypt for password hashing
+- bcrypt for password hashing
 
 ### APIs
 
@@ -59,23 +59,28 @@ This app will be for anyone who struggles with anxious thoughts, whether mild or
 ### Mockups
 
 #### Home Page
+
 ![](./src/assets/mockups/Home_page.png)
 
 #### About Page
+
 ![](./src/assets/mockups/About.png)
 
 #### Login Page
+
 ![](./src/assets/mockups/Login.png)
 
 #### Register Page
+
 ![](./src/assets/mockups/Register.png)
 
 #### Profile Page
+
 ![](./src/assets/mockups/Profile.png)
 
 #### Exercise Page
-![](./src/assets/mockups/Exercise.png)
 
+![](./src/assets/mockups/Exercise.png)
 
 ### Data
 
@@ -181,7 +186,10 @@ Response:
 
 ### Auth
 
-Yes, tbd
+- JWT auth
+    - will start with fake user account before adding auth for testing
+    - store JWT in local storage, remove when user logs out
+    - user profile will have a message to sign in if not already
 
 ## Roadmap
 
@@ -221,9 +229,10 @@ Yes, tbd
 
   - info on how the exercise works and links to mental health resources
 
-- Auth
+- Feature: JWT tokens
 
-  - tbd
+  - Server: Update expected requests / responses on protected endpoints
+  - Client: Store JWT in local storage, include JWT on axios calls
 
 - Bug fixes
 
@@ -235,3 +244,4 @@ Yes, tbd
 - custom graphics for displaying exercise data
 - additional page that delivers endpoint of randon mindfulness exercise as a quick version of exercise
 - add additional notes or thoughts to exercise
+- filter/sort through past exercises
