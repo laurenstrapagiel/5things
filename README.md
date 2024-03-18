@@ -245,3 +245,4 @@ Response:
 - additional page that delivers endpoint of randon mindfulness exercise as a quick version of exercise
 - add additional notes or thoughts to exercise
 - filter/sort through past exercises
+- use CSS animations to create a box breathing exercise
