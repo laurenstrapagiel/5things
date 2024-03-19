@@ -246,3 +246,4 @@ Response:
 - add additional notes or thoughts to exercise
 - filter/sort through past exercises
 - use CSS animations to create a box breathing exercise
+- light/dark mode toggle
