@@ -1,0 +1,24 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/global" as *;
+
+
+.exercise {
+    background-color: $grey;
+    padding: 20px;
+
+
+}
+
+.form  {
+
+    &__radial-container {
+        display: flex;
+    }
+
+    &__radial-item {
+        margin-left: 4px;
+        margin-right: 12px;
+    }
+}
