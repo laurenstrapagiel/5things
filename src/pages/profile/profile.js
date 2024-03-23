@@ -45,7 +45,7 @@ function Profile() {
       {userProfile && <h1>Hi {userProfile.username}!</h1>}
       <h2>Past Exercises</h2>
       {userExercises.length === 0 ? (
-        <p>You haven't done any exercie yet.</p>
+        <p>You haven't done any exercises yet.</p>
       ) : (
         <ul className="profile__list">
           {userExercises.map((exercise) => (

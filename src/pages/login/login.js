@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./login.scss";
 
 function Login() {
   const navigate = useNavigate();
 
-  const [isSignedUp, setIsSignedUp] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isLoginError, setIsLoginError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   const [formData, setFormData] = useState({
@@ -21,21 +19,27 @@ function Login() {
     e.preventDefault();
 
     try {
+      if (!formData.username) {
+        setErrorMessage("Please enter a username.");
+        return;
+      }
+
+      if (!formData.password) {
+        setErrorMessage("Please enter a password.");
+        return;
+      }
+
       const response = await axios.post("http://localhost:8080/login", {
         username: e.target.username.value,
         password: e.target.password.value,
       });
 
       sessionStorage.setItem("token", response.data.token);
-      setIsLoggedIn(true);
-      setIsLoginError(false);
       setErrorMessage(null);
 
       e.target.reset();
       navigate("/profile");
     } catch (error) {
-      setIsLoggedIn(false);
-      setIsLoginError(true);
       setErrorMessage(error.response.data);
     }
   };
@@ -48,9 +52,13 @@ function Login() {
   return (
     <section className="login">
       <h1>Login</h1>
+      <p>
+        Not a member? <Link to="/register">Register here.</Link>
+      </p>
       <form className="login__form" onSubmit={handleSubmit}>
         <h3>Username:</h3>
         <input
+          className="form-input"
           type="text"
           id="username"
           name="username"
@@ -59,6 +67,7 @@ function Login() {
         />
         <h3>Password:</h3>
         <input
+          className="form-input"
           type="password"
           id="password"
           name="password"
@@ -66,6 +75,7 @@ function Login() {
           onChange={handleChange}
         />
         <button type="submit">Login</button>
+        {errorMessage && <p className="login__error-message">{errorMessage}</p>}
       </form>
     </section>
   );
