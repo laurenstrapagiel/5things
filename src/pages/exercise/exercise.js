@@ -368,7 +368,7 @@ function Exercise() {
             />
           </div>
         </div>
-        <button type="submit">Done!</button>
+        <button className="form__submit-button" type="submit">Done!</button>
       </form>
     </section>
   );

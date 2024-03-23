@@ -32,6 +32,10 @@ p {
   padding-left: 12px;
   border: 2px solid $primary-medium;
   margin-bottom: 12px;
+
+  &:focus {
+    border: 2px solid $primary;
+  }
 }
 
 .form-input--error-state {
