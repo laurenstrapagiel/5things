@@ -4,16 +4,20 @@
 @use "../../styles/partials/global" as *;
 
 .profile {
-    padding: 20px;
+  padding: 20px;
 
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-    }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    &__list-item {
-        border: 1px solid $primary;
-        margin: 20px;
-        padding: 12px;
-    }
+  &__list-item {
+    border: 1px solid $primary;
+    margin: 20px;
+    padding: 12px;
+  }
+}
+
+.logo:visited {
+  color: white;
 }

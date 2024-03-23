@@ -5,7 +5,11 @@ function Header() {
   return (
     <header className="header">
       <div className="header__left">
-        <h1 className="header__logo">5Things</h1>
+        <h1 className="header__logo">
+          <Link className="logo" to="/">
+            5Things
+          </Link>
+        </h1>
       </div>
       <div className="header__right">
         <ul className="header__nav">
