@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
 import "./header.scss";
 
 function Header() {
-
   return (
     <header className="header">
       <div className="header__left">
@@ -9,13 +9,22 @@ function Header() {
       </div>
       <div className="header__right">
         <ul className="header__nav">
-          <li className="header__nav-item">Exercise</li>
-          <li className="header__nav-item">Profile</li>
-          <li className="header__nav-item">About</li>
-          <li className="header__nav-item">Login</li>
+          <li className="header__nav-item">
+            <Link to="/exercise">Exercise</Link>
+          </li>
+          <li className="header__nav-item">
+            <Link to="/profile">Profile</Link>
+          </li>
+          <li className="header__nav-item">
+            <Link to="/about">About</Link>
+          </li>
+          <li className="header__nav-item">
+            <Link to="/login">Login</Link>
+          </li>
         </ul>
       </div>
     </header>
   );
 }
+
 export default Header;
