@@ -1,0 +1,19 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/global" as *;
+
+.profile {
+    padding: 20px;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__list-item {
+        border: 1px solid $primary;
+        margin: 20px;
+        padding: 12px;
+    }
+}
