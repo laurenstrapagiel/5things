@@ -40,7 +40,9 @@ function Login() {
       e.target.reset();
       navigate("/profile");
     } catch (error) {
-      setErrorMessage(error.response.data);
+      if (error.response.status === 401) {
+        setErrorMessage("Incorrect username or password.");
+      }
     }
   };
 
