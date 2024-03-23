@@ -9,7 +9,7 @@ function Exercise() {
   const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
     id: uuidv4(),
-    user_id: 1,
+    user_id: "",
     created_at: new Date().toISOString(),
     location: "",
     see_1: "",
@@ -33,13 +33,22 @@ function Exercise() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const token = sessionStorage.getItem("token");
+      if (!token) {
+        throw new Error("User not authenticated");
+      }
+
       const response = await axios.post(
         "http://localhost:8080/exercises",
-        formData
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       );
-      console.log("Exercise submitted successfully:", response.data);
+      navigate("/profile");
     } catch (error) {
-      console.error("Error submitting exercise:", error);
       setErrorMessage("Error submitting exercise. Please try again.");
     }
   };
@@ -340,7 +349,7 @@ function Exercise() {
               className="radio"
               type="radio"
               name="rating_after"
-              value="3r"
+              value="3"
               checked={formData.rating_after === "3"}
               onChange={handleChange}
             />
@@ -368,7 +377,9 @@ function Exercise() {
             />
           </div>
         </div>
-        <button className="form__submit-button" type="submit">Done!</button>
+        <button className="form__submit-button" type="submit">
+          Done!
+        </button>
       </form>
     </section>
   );
