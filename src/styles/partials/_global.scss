@@ -27,10 +27,12 @@ p {
 
 a {
   text-decoration: none;
+  font-weight: bold;
+  color: $primary-medium;
 }
 
 a:visited {
-  color: $black;
+  color: $primary-medium;
 }
 
 .form-input {

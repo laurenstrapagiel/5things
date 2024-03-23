@@ -33,7 +33,7 @@ function Profile() {
   }, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <h2>Please login to see past exercises.</h2>;
   }
 
   if (error) {

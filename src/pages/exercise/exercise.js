@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import { Link } from "react-router-dom";
+
 
 function Exercise() {
   const navigate = useNavigate();
@@ -61,6 +63,9 @@ function Exercise() {
   return (
     <section className="exercise">
       <h1 className="exercise__header">Exercise</h1>
+      <p>
+        You must <Link to="/login">login</Link> to keep track of your exercises.
+      </p>
       <form className="form" onSubmit={handleSubmit}>
         <h3>Location</h3>
         <input
