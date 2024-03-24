@@ -40,6 +40,41 @@ function Profile() {
     return <div>{error}</div>;
   }
 
+const formatTimestamp = (timestamp) => {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const date = new Date(timestamp);
+  const month = months[date.getMonth()];
+  const day = date.getDate();
+  const year = date.getFullYear();
+  let hours = date.getHours();
+  const minutes = date.getMinutes();
+  const ampm = hours >= 12 ? "p.m." : "a.m.";
+
+
+  hours = hours % 12;
+  hours = hours ? hours : 12; 
+
+  const formattedTime = `${hours}:${
+    minutes < 10 ? "0" + minutes : minutes
+  } ${ampm}`;
+
+  return `${month} ${day}, ${year} at ${formattedTime}`;
+};
+
   return (
     <section className="profile">
       {userProfile && <h1>Hi {userProfile.username}!</h1>}
@@ -50,7 +85,9 @@ function Profile() {
         <ul className="profile__list">
           {userExercises.map((exercise) => (
             <li key={exercise.id} className="profile__list-item">
-              <h3>Date:</h3> {exercise.created_at}
+              <div className="profile__date">
+              {formatTimestamp(exercise.created_at)}
+              </div>
               <h3>Location:</h3> {exercise.location}
               <h3>Anxiety rating before exercise:</h3> {exercise.rating_before}
               <h3>Five things you could see:</h3> {exercise.see_1},{" "}

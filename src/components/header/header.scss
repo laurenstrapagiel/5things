@@ -19,35 +19,35 @@
     flex-direction: row;
   }
 
-&__logo {
-  height: 60px;
-  margin-bottom: 20px;
+  &__logo {
+    height: 60px;
+    margin-bottom: 20px;
 
-  @include tablet {
-    margin-bottom: 0;
+    @include tablet {
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+    }
   }
 
-   @include desktop {
-    margin-bottom: 0;
+  &__nav {
+    display: flex;
+    align-items: center;
   }
-}
 
+  &__nav-item {
+    background-color: $white;
+    color: $black;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 10px;
+    border: none;
+    transition: 100ms ease-in-out;
 
-&__nav {
-  display: flex;
-  align-items: center;
-}
-
-&__nav-item {
-  background-color: $primary;
-  color: $black;
-  padding: 10px;
-  margin: 0 5px;
-  border-radius: 10px;
-  border: none;
-
-  &:hover {
-    background-color: $primary-light;
+    &:hover {
+      background-color: $primary;
+    }
   }
-}
 }
