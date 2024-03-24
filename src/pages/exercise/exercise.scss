@@ -18,11 +18,14 @@
     margin-right: 12px;
   }
 
-  &__submit-button {
+  &__submit-button,
+  &__next-button,
+  &__back-button {
     background-color: $primary;
     color: $black;
     padding: 10px;
     margin: 12px 0;
+    margin-right: 12px;
     border-radius: 10px;
     border: 1px solid $primary;
 
@@ -30,5 +33,9 @@
       background-color: $white;
       border: 1px solid $primary;
     }
+  }
+
+  &__error-message {
+    color: red;
   }
 }
