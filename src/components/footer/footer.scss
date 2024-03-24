@@ -1,0 +1,26 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/global" as *;
+
+.footer {
+  background-color: $primary-dark;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  &__coded-by {
+    color: white;
+    font-size: 12px;
+  }
+
+  &__link {
+    color: $primary;
+
+    &:visited {
+        color: $primary;
+    }
+  }
+}

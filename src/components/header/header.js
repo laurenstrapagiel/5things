@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import "./header.scss";
-import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo/5.svg"
 
 function Header() {
-  const navigate = useNavigate();
 
 
   return (
