@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./header.scss";
 import { useNavigate } from "react-router-dom";
+import Logo from "../../assets/logo/5.svg"
 
 function Header() {
   const navigate = useNavigate();
@@ -11,7 +12,11 @@ function Header() {
       <div className="header__left">
         <h1 className="header__logo">
           <Link className="logo" to="/">
-            5Things
+            <img
+              className="header__logo"
+              src={Logo}
+              alt="5Things logo"
+            />
           </Link>
         </h1>
       </div>
