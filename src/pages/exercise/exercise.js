@@ -90,7 +90,6 @@ function Exercise() {
 
   const nextStep = () => {
     setCurrentStep((prevStep) => prevStep + 1);
-    setErrorMessage("");
   };
 
   const prevStep = () => {
