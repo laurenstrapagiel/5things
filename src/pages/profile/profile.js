@@ -55,6 +55,25 @@ function Profile() {
     return date.toLocaleString(undefined, options);
   };
 
+  //delete exercise
+
+   const deleteExercise = async (exerciseId) => {
+     try {
+       const token = sessionStorage.getItem("token");
+       await axios.delete(`http://localhost:8080/exercises/${exerciseId}`, {
+         headers: {
+           Authorization: `Bearer ${token}`,
+         },
+       });
+       setUserExercises((prevExercises) =>
+         prevExercises.filter((exercise) => exercise.id !== exerciseId)
+       );
+     } catch (error) {
+       console.error("Error deleting exercise:", error);
+     }
+   };
+
+
 
   return (
     <section className="profile">
@@ -82,7 +101,11 @@ function Profile() {
               {exercise.smell_2}
               <h3>One thing you could taste:</h3> {exercise.taste_1}
               <h3>Anxiety rating after exercise:</h3> {exercise.rating_after}
-              
+              <div>
+                <button className="profile__delete-button" onClick={() => deleteExercise(exercise.id)}>
+                  Delete
+                </button>
+              </div>
             </li>
           ))}
         </ul>

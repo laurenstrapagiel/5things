@@ -36,7 +36,6 @@ function Exercise() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-
     //validation
 
     if (
