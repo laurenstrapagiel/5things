@@ -1,20 +1,14 @@
 import { Link } from "react-router-dom";
 import "./header.scss";
-import Logo from "../../assets/logo/5.svg"
+import Logo from "../../assets/logo/5.svg";
 
 function Header() {
-
-
   return (
     <header className="header">
       <div className="header__left">
         <h1 className="header__logo">
           <Link className="logo" to="/">
-            <img
-              className="header__logo"
-              src={Logo}
-              alt="5Things logo"
-            />
+            <img className="header__logo" src={Logo} alt="5Things logo" />
           </Link>
         </h1>
       </div>

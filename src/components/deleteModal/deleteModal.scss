@@ -1,0 +1,84 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/global" as *;
+
+.delete-modal {
+  padding: 1rem;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: $white;
+  z-index: 2;
+  border: 5px solid $primary;
+  border-radius: 10px;
+
+  @include tablet {
+    height: 200px;
+    top: 11.5625rem;
+    width: 88%;
+    left: 6%;
+    border-radius: 4px;
+    padding: 1rem 4rem;
+  }
+
+  @include desktop {
+    width: 42rem;
+    margin-left: -21rem;
+    left: 50%;
+  }
+
+  &__buttonwrapper {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0%;
+    right: 5%;
+    margin-bottom: 1rem;
+    width: 90%;
+
+    @include tablet {
+      width: 80%;
+      justify-content: flex-end;
+      margin-right: 1rem;
+      bottom: 10%;
+    }
+
+    @include desktop {
+      width: 80%;
+      justify-content: flex-end;
+      margin-right: 1rem;
+      bottom: 10%;
+    }
+  }
+
+  &__button {
+    background-color: $primary-dark;
+    color: $white;
+    padding: 10px;
+    margin: 12px 0;
+    margin-right: 12px;
+    border-radius: 10px;
+    border: 1px solid $primary-dark;
+    transition: 100ms ease-in-out;
+
+    &:hover {
+      background-color: $white;
+      border: 1px solid $primary;
+      color: $black;
+    }
+  }
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(19, 24, 44, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

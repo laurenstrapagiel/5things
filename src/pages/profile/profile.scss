@@ -43,6 +43,11 @@
       color: $black;
     }
   }
+
+  &__exercise-count {
+    color: $primary-dark;
+    font-size: 30px;
+  }
 }
 
 .logo:visited {
