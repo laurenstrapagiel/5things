@@ -101,7 +101,7 @@ function Exercise() {
       case 1:
         return (
           <>
-            <h3>Location</h3>
+            <h3>Let's go through each step one by one. Start with sharing where you are right now.</h3>
             <input
               className={
                 formData.location === "" && errorMessage
@@ -393,7 +393,7 @@ function Exercise() {
       case 8:
         return (
           <>
-            <h3>How would you rate your anxiety now?</h3>
+            <h3>Good job! How would you rate your anxiety now?</h3>
             <div className="form__radial-container">
               <label className="form__radial_label">1</label>
               <div className="form__radial-item">
@@ -461,7 +461,7 @@ function Exercise() {
   return (
     <section className="exercise">
       <h1 className="exercise__header">Exercise</h1>
-      <p>
+      <p className="exercise__intro">
         You must <Link to="/login">login</Link> to keep track of your exercises.
       </p>
       <form className="form" onSubmit={handleSubmit}>

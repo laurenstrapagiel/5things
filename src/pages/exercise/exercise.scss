@@ -5,6 +5,10 @@
 
 .exercise {
   padding: 20px;
+
+  &__intro {
+    margin: 20px 0;
+  }
 }
 
 .form {
@@ -40,3 +44,11 @@
     color: red;
   }
 }
+
+.radio {
+  width: 20px;
+  height: 20px;
+  accent-color: $primary-dark;
+}
+
+

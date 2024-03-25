@@ -15,7 +15,7 @@ function Homepage() {
         5Things is an anti-anxiety mindfulness exercise that engages your senses
         to ground yourself.
       </h2>
-      <p>Do this exercise, you simply name:</p>
+      <p>To do this exercise, you simply name:</p>
       <ul>
         <li className="homepage__list-item">
           <img src={FiveIcon} className="homepage__icon"></img>
