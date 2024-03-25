@@ -55,6 +55,7 @@ function Profile() {
     return date.toLocaleString(undefined, options);
   };
 
+
   return (
     <section className="profile">
       {userProfile && <h1>Hi {userProfile.username}!</h1>}
@@ -81,6 +82,7 @@ function Profile() {
               {exercise.smell_2}
               <h3>One thing you could taste:</h3> {exercise.taste_1}
               <h3>Anxiety rating after exercise:</h3> {exercise.rating_after}
+              
             </li>
           ))}
         </ul>
