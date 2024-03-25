@@ -13,7 +13,7 @@ function Exercise() {
   const [formData, setFormData] = useState({
     id: uuidv4(),
     user_id: "",
-    created_at: new Date().toISOString(),
+    created_at: new Date(),
     location: "",
     see_1: "",
     see_2: "",
