@@ -18,23 +18,23 @@ function Homepage() {
       <p>To do this exercise, you simply name:</p>
       <ul>
         <li className="homepage__list-item">
-          <img src={FiveIcon} className="homepage__icon"></img>
+          <img src={FiveIcon} alt="5" className="homepage__icon"></img>
           <h2 className="homepage__list-text"> Things you can see.</h2>
         </li>
         <li className="homepage__list-item">
-          <img src={FourIcon} className="homepage__icon"></img>
+          <img src={FourIcon} alt="4" className="homepage__icon"></img>
           <h2 className="homepage__list-text"> Things you can touch.</h2>
         </li>
         <li className="homepage__list-item">
-          <img src={ThreeIcon} className="homepage__icon"></img>
+          <img src={ThreeIcon} alt="3" className="homepage__icon"></img>
           <h2 className="homepage__list-text"> Things you can hear.</h2>
         </li>
         <li className="homepage__list-item">
-          <img src={TwoIcon} className="homepage__icon"></img>
+          <img src={TwoIcon} alt="2" className="homepage__icon"></img>
           <h2 className="homepage__list-text"> Thing you can smell.</h2>
         </li>
         <li className="homepage__list-item">
-          <img src={OneIcon} className="homepage__icon"></img>
+          <img src={OneIcon} alt="1" className="homepage__icon"></img>
           <h2 className="homepage__list-text"> Thing you can taste.</h2>
         </li>
       </ul>

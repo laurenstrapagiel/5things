@@ -1,5 +1,5 @@
 import "./exercise.scss";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
@@ -68,15 +68,11 @@ function Exercise() {
         throw new Error("User not authenticated");
       }
 
-      const response = await axios.post(
-        "http://localhost:8080/exercises",
-        formData,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      await axios.post("http://localhost:8080/exercises", formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       navigate("/profile");
     } catch (error) {
       setErrorMessage("Error submitting form. Please try again.");
