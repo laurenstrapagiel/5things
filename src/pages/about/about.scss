@@ -7,6 +7,13 @@
   padding: 20px;
   min-height: 100vh;
 
+  @include tablet {
+    padding: 40px 40px;
+  }
+  @include desktop {
+    padding: 40px 100px;
+  }
+
   &__text {
     margin: 20px 0;
   }

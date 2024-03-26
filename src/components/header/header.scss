@@ -13,10 +13,12 @@
 
   @include tablet {
     flex-direction: row;
+    padding: 20px 40px;
   }
 
   @include desktop {
     flex-direction: row;
+    padding: 20px 100px;
   }
 
   &__logo {

@@ -16,7 +16,7 @@ function Homepage() {
         to ground yourself.
       </h2>
       <p>To do this exercise, you simply name:</p>
-      <ul>
+      <ul className="homepage__list">
         <li className="homepage__list-item">
           <img src={FiveIcon} alt="5" className="homepage__icon"></img>
           <h2 className="homepage__list-text"> Things you can see.</h2>

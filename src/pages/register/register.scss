@@ -6,6 +6,13 @@
 .register {
   padding: 20px;
 
+  @include tablet {
+    padding: 40px 40px;
+  }
+  @include desktop {
+    padding: 40px 100px;
+  }
+
   &__submit {
     background-color: $primary-dark;
     color: $white;
@@ -20,6 +27,16 @@
       background-color: $white;
       border: 1px solid $primary;
       color: $black;
+    }
+  }
+
+  &__form {
+    @include tablet {
+      width: 50%;
+    }
+
+    @include desktop {
+      width: 30%;
     }
   }
 }
