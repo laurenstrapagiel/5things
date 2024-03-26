@@ -6,6 +6,7 @@ import Login from "./pages/login/login";
 import Profile from "./pages/profile/profile";
 import Register from "./pages/register/register";
 import Footer from "./components/footer/footer";
+import About from "./pages/about/about";
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/about" element={<About />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </div>
   );
