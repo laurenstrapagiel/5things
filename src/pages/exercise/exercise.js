@@ -101,7 +101,10 @@ function Exercise() {
       case 1:
         return (
           <>
-            <h3>Let's go through each step one by one. Start with sharing where you are right now.</h3>
+            <h3>
+              Let's go through each step one by one. Start with sharing where
+              you are right now.
+            </h3>
             <input
               className={
                 formData.location === "" && errorMessage

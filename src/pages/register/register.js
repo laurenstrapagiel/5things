@@ -74,7 +74,9 @@ function Register() {
           value={formData.confirmPassword}
           onChange={handleChange}
         />
-        <button type="submit">Submit</button>
+        <button className="login__submit" type="submit">
+          Submit
+        </button>
         {errorMessage && (
           <p className="register__error-message">{errorMessage}</p>
         )}

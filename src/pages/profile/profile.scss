@@ -36,6 +36,7 @@
     border-radius: 10px;
     border: 1px solid $primary-dark;
     transition: 100ms ease-in-out;
+    float: right;
 
     &:hover {
       background-color: $white;
@@ -47,6 +48,23 @@
   &__exercise-count {
     color: $primary-dark;
     font-size: 30px;
+  }
+
+  &__hr {
+    border-color: $primary-medium;
+    margin: 12px -12px;
+  }
+
+  &__subhead {
+    display: inline;
+   
+
+  }
+
+  &__data {
+    display: inline;
+     color: $primary-dark;
+   
   }
 }
 

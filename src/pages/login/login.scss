@@ -4,5 +4,22 @@
 @use "../../styles/partials/global" as *;
 
 .login {
-    padding: 20px;
+  padding: 20px;
+
+  &__submit {
+    background-color: $primary-dark;
+    color: $white;
+    padding: 10px;
+    margin: 12px 0;
+    margin-right: 12px;
+    border-radius: 10px;
+    border: 1px solid $primary-dark;
+    transition: 100ms ease-in-out;
+
+    &:hover {
+      background-color: $white;
+      border: 1px solid $primary;
+      color: $black;
+    }
+  }
 }

@@ -2,6 +2,7 @@ import "./profile.scss";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DeleteModal from "../../components/deleteModal/deleteModal";
+import Badges from "../../components/badges/badges";
 
 function Profile() {
   const [userProfile, setUserProfile] = useState(null);
@@ -77,18 +78,19 @@ function Profile() {
   return (
     <section className="profile">
       {userProfile && <h1>Hi {userProfile.username}!</h1>}
+      <p>
+        You have completed{" "}
+        <span className="profile__exercise-count">{userExercises.length}</span>{" "}
+        exercises so far.
+      </p>
+      <div className="profile__badges-container">
+        <Badges userExercises={userExercises} />
+      </div>
 
       {userExercises.length === 0 ? (
         <p>You haven't done any exercises yet.</p>
       ) : (
         <ul className="profile__list">
-          <p>
-            You have completed{" "}
-            <span className="profile__exercise-count">
-              {userExercises.length}
-            </span>{" "}
-            exercises so far.
-          </p>
           {userExercises
             .slice()
             .reverse()
@@ -97,20 +99,53 @@ function Profile() {
                 <div className="profile__date">
                   {formatTimestamp(exercise.created_at)}
                 </div>
-                <h3>Location:</h3> {exercise.location}
-                <h3>Anxiety rating before exercise:</h3>{" "}
-                {exercise.rating_before}
-                <h3>Five things you could see:</h3> {exercise.see_1},{" "}
-                {exercise.see_2}, {exercise.see_3}, {exercise.see_4}, and{" "}
-                {exercise.see_5}
-                <h3>Four things you could touch:</h3> {exercise.touch_1},{" "}
-                {exercise.touch_2}, {exercise.touch_3}, and {exercise.touch_4}
-                <h3>Three things you could hear:</h3> {exercise.hear_1},{" "}
-                {exercise.hear_2}, and {exercise.hear_3}
-                <h3>Two things you could smell:</h3> {exercise.smell_1} and{" "}
-                {exercise.smell_2}
-                <h3>One thing you could taste:</h3> {exercise.taste_1}
-                <h3>Anxiety rating after exercise:</h3> {exercise.rating_after}
+                <h3 className="profile__subhead">Location: </h3>
+                <p className="profile__data">{exercise.location}</p>
+                <hr className="profile__hr" />
+                <h3 className="profile__subhead">
+                  Anxiety rating before exercise:{" "}
+                </h3>
+                <p className="profile__data">{exercise.rating_before}</p>
+                <hr className="profile__hr" />
+                <h3 className="profile__subhead">
+                  Five things you could see:{" "}
+                </h3>
+                <p className="profile__data">
+                  {exercise.see_1}, {exercise.see_2}, {exercise.see_3},{" "}
+                  {exercise.see_4}, and {exercise.see_5}
+                </p>
+                <hr className="profile__hr" />
+                <h3 className="profile__subhead">
+                  Four things you could touch:{" "}
+                </h3>
+                <p className="profile__data">
+                  {exercise.touch_1}, {exercise.touch_2}, {exercise.touch_3},
+                  and {exercise.touch_4}
+                </p>
+                <hr className="profile__hr" />
+                <h3 className="profile__subhead">
+                  Three things you could hear:
+                </h3>{" "}
+                <p className="profile__data">
+                  {exercise.hear_1}, {exercise.hear_2}, and {exercise.hear_3}
+                </p>
+                <hr className="profile__hr" />
+                <h3 className="profile__subhead">
+                  Two things you could smell:
+                </h3>{" "}
+                <p className="profile__data">
+                  {exercise.smell_1} and {exercise.smell_2}
+                </p>
+                <hr className="profile__hr" />
+                <h3 className="profile__subhead">
+                  One thing you could taste:
+                </h3>{" "}
+                <p className="profile__data">{exercise.taste_1}</p>
+                <hr className="profile__hr" />
+                <h3 className="profile__subhead">
+                  Anxiety rating after exercise:{" "}
+                </h3>
+                <p className="profile__data">{exercise.rating_after}</p>
                 <div>
                   <button
                     className="profile__delete-button"

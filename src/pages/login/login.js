@@ -76,7 +76,9 @@ function Login() {
           value={formData.password}
           onChange={handleChange}
         />
-        <button type="submit">Login</button>
+        <button className="login__submit" type="submit">
+          Login
+        </button>
         {errorMessage && <p className="login__error-message">{errorMessage}</p>}
       </form>
     </section>
