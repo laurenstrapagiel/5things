@@ -1,6 +1,11 @@
 import "./about.scss";
 
+
+
+
 function About() {
+
+
   return (
     <section className="about">
       <h1>About 5Things</h1>
