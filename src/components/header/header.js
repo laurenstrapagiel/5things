@@ -1,8 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./header.scss";
 import Logo from "../../assets/logo/5.svg";
 
 function Header() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    sessionStorage.removeItem("token");
+    navigate("/");
+  };
   return (
     <header className="header">
       <div className="header__left">
@@ -23,9 +29,17 @@ function Header() {
           <li className="header__nav-item">
             <Link to="/about">About</Link>
           </li>
-          <li className="header__nav-item">
-            <Link to="/login">Login</Link>
-          </li>
+          {sessionStorage.getItem("token") ? (
+            <li className="header__nav-item">
+              <Link to="/" onClick={handleLogout}>
+                Logout
+              </Link>
+            </li>
+          ) : (
+            <li className="header__nav-item">
+              <Link to="/login">Login</Link>
+            </li>
+          )}
         </ul>
       </div>
     </header>
