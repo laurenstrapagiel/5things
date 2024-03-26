@@ -10,8 +10,6 @@ function Exercise() {
   const [errorMessage, setErrorMessage] = useState("");
   const [currentStep, setCurrentStep] = useState(1);
 
-  document.title = "5Things | Exercise";
-
   const [formData, setFormData] = useState({
     id: uuidv4(),
     user_id: "",
@@ -70,15 +68,11 @@ function Exercise() {
         throw new Error("User not authenticated");
       }
 
-      const response = await axios.post(
-        "http://localhost:8080/exercises",
-        formData,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      await axios.post("http://localhost:8080/exercises", formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
       navigate("/profile");
     } catch (error) {
       setErrorMessage("Error submitting form. Please try again.");
