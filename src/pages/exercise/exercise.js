@@ -1,5 +1,5 @@
 import "./exercise.scss";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
@@ -9,6 +9,8 @@ function Exercise() {
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
   const [currentStep, setCurrentStep] = useState(1);
+
+  document.title = "5Things | Exercise";
 
   const [formData, setFormData] = useState({
     id: uuidv4(),
@@ -68,7 +70,7 @@ function Exercise() {
         throw new Error("User not authenticated");
       }
 
-      const response = await axios.post(
+      await axios.post(
         "http://localhost:8080/exercises",
         formData,
         {

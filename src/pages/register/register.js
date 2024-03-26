@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 function Register() {
   const navigate = useNavigate();
 
+  document.title = "5Things | Register";
+
   const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
     username: "",

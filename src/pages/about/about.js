@@ -1,10 +1,7 @@
 import "./about.scss";
 
-
-
-
 function About() {
-
+  document.title = "5Things | About";
 
   return (
     <section className="about">

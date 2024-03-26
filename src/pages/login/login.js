@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import "./login.scss";
 
 function Login() {
+  document.title = "5Things | Login";
+
   const navigate = useNavigate();
 
   const [errorMessage, setErrorMessage] = useState("");

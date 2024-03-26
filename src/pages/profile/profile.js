@@ -10,6 +10,8 @@ function Profile() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  document.title = "5Things | My Profile";
+
   //delete modal
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -89,8 +91,7 @@ function Profile() {
 
       {userExercises.length === 0 ? (
         <p>You haven't done any exercises yet.</p>
-        
-      )  : (
+      ) : (
         <ul className="profile__list">
           {userExercises
             .slice()
