@@ -70,7 +70,7 @@ function Exercise() {
         throw new Error("User not authenticated");
       }
 
-      await axios.post(
+      const response = await axios.post(
         "http://localhost:8080/exercises",
         formData,
         {
