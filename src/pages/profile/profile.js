@@ -89,7 +89,8 @@ function Profile() {
 
       {userExercises.length === 0 ? (
         <p>You haven't done any exercises yet.</p>
-      ) : (
+        
+      )  : (
         <ul className="profile__list">
           {userExercises
             .slice()

@@ -10,6 +10,8 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  position: sticky;
+  bottom: 0;
 
   &__coded-by {
     color: white;
