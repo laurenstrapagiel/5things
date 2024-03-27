@@ -17,7 +17,15 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: baseline;
+
+    @include tablet {
+      gap: 10%;
+    }
+
+     @include desktop {
+      gap: 5%;
+    }
   }
 
   &__list-item {
