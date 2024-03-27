@@ -5,7 +5,7 @@
 
 .header {
   background-image: linear-gradient(to right, $primary-dark, $primary-medium);
-  padding: 20px;
+  padding: 20px 20px 35px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,7 +43,7 @@
   &__nav-item {
     background-color: $white;
     padding: 10px;
-    margin: 0 5px;
+    margin: 0 10px;
     border-radius: 10px;
     border: none;
     transition: 100ms ease-in-out;
