@@ -4,7 +4,7 @@
 @use "../../styles/partials/global" as *;
 
 .footer {
-  background-color: $primary-dark;
+  background-image: linear-gradient(to right, $primary-dark , $primary-medium);
   padding: 20px;
   display: flex;
   justify-content: space-between;

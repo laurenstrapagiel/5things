@@ -4,12 +4,13 @@
 @use "../../styles/partials/global" as *;
 
 .header {
-  background-color: $primary-dark;
+  background-image: linear-gradient(to right, $primary-dark, $primary-medium);
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
   @include tablet {
     flex-direction: row;
@@ -41,12 +42,12 @@
 
   &__nav-item {
     background-color: $white;
-    color: $black;
     padding: 10px;
     margin: 0 5px;
     border-radius: 10px;
     border: none;
     transition: 100ms ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
     &:hover {
       background-color: $primary;

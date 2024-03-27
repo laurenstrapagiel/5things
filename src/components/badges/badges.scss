@@ -11,10 +11,12 @@
   flex-wrap: wrap;
   border-radius: 10px;
   width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
   &__badge {
     height: 100px;
     margin: 12px;
+
   }
 
   &__header {
