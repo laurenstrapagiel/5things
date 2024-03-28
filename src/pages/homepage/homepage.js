@@ -6,7 +6,6 @@ import FourIcon from "../../assets/images/4icon.svg";
 import FiveIcon from "../../assets/images/5icon.svg";
 import { Link } from "react-router-dom";
 
-
 function Homepage() {
   return (
     <section className="homepage">
@@ -15,6 +14,7 @@ function Homepage() {
         5Things is an anti-anxiety mindfulness exercise that engages your senses
         to ground yourself.
       </h2>
+
       <p>To do this exercise, you simply name:</p>
       <ul className="homepage__list">
         <li className="homepage__list-item">
