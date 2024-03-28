@@ -9,19 +9,20 @@ function Profile() {
   const [userExercises, setUserExercises] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedExerciseId, setSelectedExerciseId] = useState(null);
 
-    document.title = "5Things | My Profile";
-
+  document.title = "5Things | My Profile";
 
   //delete modal
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const openModal = (exerciseId) => {
+    setSelectedExerciseId(exerciseId);
   };
+
   const closeModal = () => {
-    setIsModalOpen(false);
+    setSelectedExerciseId(null);
   };
 
   const handleConfirm = async (event) => {
@@ -89,11 +90,9 @@ function Profile() {
       <div className="profile__badges-container">
         <Badges userExercises={userExercises} />
       </div>
-
       {userExercises.length === 0 ? (
         <p>You haven't done any exercises yet.</p>
-        
-      )  : (
+      ) : (
         <ul className="profile__list">
           {userExercises
             .slice()
@@ -153,20 +152,22 @@ function Profile() {
                 <div>
                   <button
                     className="profile__delete-button"
-                    onClick={openModal}
+                    onClick={() => openModal(exercise.id)}
                   >
                     Delete
                   </button>
-                  <DeleteModal
-                    exerciseId={exercise.id}
-                    isOpen={isModalOpen}
-                    onCancel={closeModal}
-                    onConfirm={handleConfirm}
-                  />
                 </div>
               </li>
             ))}
         </ul>
+      )}
+      {selectedExerciseId !== null && (
+        <DeleteModal
+          exerciseId={selectedExerciseId}
+          isOpen={true}
+          onCancel={closeModal}
+          onConfirm={handleConfirm}
+        />
       )}
     </section>
   );
