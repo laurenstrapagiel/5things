@@ -15,6 +15,8 @@ function Register() {
     confirmPassword: "",
   });
 
+  //connect to register endpoint
+
   const handleSignup = async (e) => {
     e.preventDefault();
 

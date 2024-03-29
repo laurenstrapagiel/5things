@@ -17,6 +17,7 @@ function Login() {
     password: "",
   });
 
+  //connect to login endpoint
   const handleSubmit = async (e) => {
     e.preventDefault();
 

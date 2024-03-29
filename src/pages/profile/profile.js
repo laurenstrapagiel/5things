@@ -10,12 +10,11 @@ function Profile() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedExerciseId, setSelectedExerciseId] = useState(null);
+  const [Search, setSearch] = useState("");
 
   document.title = "5Things | My Profile";
 
-  //delete modal
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  //delete modal open and close
 
   const openModal = (exerciseId) => {
     setSelectedExerciseId(exerciseId);
@@ -79,6 +78,14 @@ function Profile() {
     return date.toLocaleString(undefined, options);
   };
 
+  //search filter function
+
+  const filteredExercises = userExercises.filter((exercise) =>
+    `${exercise.location} ${exercise.rating_before} ${exercise.rating_after} ${exercise.see_1} ${exercise.see_2} ${exercise.see_3} ${exercise.see_4} ${exercise.see_5} ${exercise.touch_1} ${exercise.touch_2} ${exercise.touch_3} ${exercise.touch_4} ${exercise.hear_1} ${exercise.hear_2} ${exercise.hear_3} ${exercise.smell_1} ${exercise.smell_2} ${exercise.taste_1}`
+      .toLowerCase()
+      .includes(Search.toLowerCase())
+  );
+
   return (
     <section className="profile">
       {userProfile && <h1>Hi {userProfile.username}!</h1>}
@@ -90,11 +97,18 @@ function Profile() {
       <div className="profile__badges-container">
         <Badges userExercises={userExercises} />
       </div>
-      {userExercises.length === 0 ? (
-        <p>You haven't done any exercises yet.</p>
+      <input
+        type="text"
+        className="profile__search"
+        value={Search}
+        onChange={(e) => setSearch(e.target.value)}
+        placeholder="Search exercises..."
+      />
+      {filteredExercises.length === 0 ? (
+        <p>No matching exercises found.</p>
       ) : (
         <ul className="profile__list">
-          {userExercises
+          {filteredExercises
             .slice()
             .reverse()
             .map((exercise) => (

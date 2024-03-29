@@ -5,6 +5,7 @@ import Logo from "../../assets/logo/5.svg";
 function Header() {
   const navigate = useNavigate();
 
+  //handle logout and remove token
   const handleLogout = () => {
     sessionStorage.removeItem("token");
     navigate("/");

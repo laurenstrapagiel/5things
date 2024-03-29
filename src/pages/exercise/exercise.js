@@ -10,6 +10,7 @@ function Exercise() {
   const [errorMessage, setErrorMessage] = useState("");
   const [currentStep, setCurrentStep] = useState(1);
 
+  //set form data
   const [formData, setFormData] = useState({
     id: uuidv4(),
     user_id: "",
@@ -62,6 +63,8 @@ function Exercise() {
       return;
     }
 
+    //connect to endpoint
+
     try {
       const token = sessionStorage.getItem("token");
       if (!token) {
@@ -84,6 +87,7 @@ function Exercise() {
     setFormData({ ...formData, [name]: value });
   };
 
+  //handle steps
   const nextStep = () => {
     setCurrentStep((prevStep) => prevStep + 1);
   };
@@ -91,6 +95,8 @@ function Exercise() {
   const prevStep = () => {
     setCurrentStep((prevStep) => prevStep - 1);
   };
+
+  //render form steps
 
   const renderStep = () => {
     switch (currentStep) {

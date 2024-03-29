@@ -11,6 +11,8 @@ import Badge100 from "../../assets/images/100badge.svg";
 function Badges({ userExercises }) {
   const [badgeImages, setBadgeImages] = useState([]);
 
+//push badge images into array based on exercises done
+
   useEffect(() => {
     const earnBadges = () => {
       const badges = [];
