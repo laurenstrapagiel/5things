@@ -5,7 +5,7 @@
 
 .header {
   background-image: linear-gradient(to right, $primary-dark, $primary-medium);
-  padding: 20px 20px 35px 20px;
+  padding: 1.25rem 1.25rem 2.1875rem 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,17 +14,17 @@
 
   @include tablet {
     flex-direction: row;
-    padding: 20px 40px;
+    padding: 1.25rem 2.5rem;
   }
 
   @include desktop {
     flex-direction: row;
-    padding: 20px 100px;
+    padding: 1.25rem 6.25rem;
   }
 
   &__logo {
-    height: 60px;
-    margin-bottom: 20px;
+    height: 3.75rem;
+    margin-bottom: 1.25rem;
 
     @include tablet {
       margin-bottom: 0;
@@ -42,9 +42,9 @@
 
   &__nav-item {
     background-color: $white;
-    padding: 10px;
-    margin: 0 10px;
-    border-radius: 10px;
+    padding: 0.625rem;
+    margin: 0 0.625rem;
+    border-radius: 0.625rem;
     border: none;
     transition: 100ms ease-in-out;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

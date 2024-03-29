@@ -4,8 +4,8 @@
 @use "../../styles/partials/global" as *;
 
 .footer {
-  background-image: linear-gradient(to right, $primary-dark , $primary-medium);
-  padding: 20px;
+  background-image: linear-gradient(to right, $primary-dark, $primary-medium);
+  padding: 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,14 +15,14 @@
 
   &__coded-by {
     color: white;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   &__link {
     color: $primary;
 
     &:visited {
-        color: $primary;
+      color: $primary;
     }
   }
 }

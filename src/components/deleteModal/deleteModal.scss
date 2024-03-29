@@ -12,10 +12,10 @@
   background-color: $white;
   z-index: 2;
   border: 5px solid $primary;
-  border-radius: 10px;
+  border-radius: 0.625rem;
 
   @include tablet {
-    height: 200px;
+    height: 12.5rem;
     top: 11.5625rem;
     width: 88%;
     left: 6%;
@@ -56,10 +56,10 @@
   &__button {
     background-color: $primary-dark;
     color: $white;
-    padding: 10px;
-    margin: 12px 0;
-    margin-right: 12px;
-    border-radius: 10px;
+    padding: 0.625rem;
+    margin: 0.75rem 0;
+    margin-right: 0.75rem;
+    border-radius: 0.625rem;
     border: 1px solid $primary-dark;
     transition: 100ms ease-in-out;
 

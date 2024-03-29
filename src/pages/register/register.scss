@@ -4,21 +4,21 @@
 @use "../../styles/partials/global" as *;
 
 .register {
-  padding: 20px;
+  padding: 1.25rem;
 
   @include tablet {
-    padding: 40px 40px;
+    padding: 2.5rem 2.5rem;
   }
   @include desktop {
-    padding: 40px 100px;
+    padding: 2.5rem 6.25rem;
   }
 
   &__submit {
     background-color: $primary-dark;
     color: $white;
-    padding: 10px;
-    margin: 12px 0;
-    margin-right: 12px;
+    padding: 0.625rem;
+    margin: 0.75rem 0;
+    margin-right: 0.75rem;
     border-radius: 10px;
     border: 1px solid $primary-dark;
     transition: 100ms ease-in-out;

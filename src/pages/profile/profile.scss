@@ -4,14 +4,14 @@
 @use "../../styles/partials/global" as *;
 
 .profile {
-  padding: 20px;
+  padding: 1.25rem;
   min-height: 100vh;
 
   @include tablet {
-    padding: 40px 40px;
+    padding: 2.5rem 2.5rem;
   }
   @include desktop {
-    padding: 40px 100px;
+    padding: 2.5rem 6.25rem;
   }
 
   &__list {
@@ -30,8 +30,8 @@
 
   &__list-item {
     border: 3px solid $primary;
-    margin: 20px 0;
-    padding: 12px;
+    margin: 1.25rem 0;
+    padding: 0.75rem;
     border-radius: 10px;
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -47,23 +47,22 @@
 
   &__date {
     background-color: $primary;
-    margin: -12px -12px;
-    margin-bottom: 12px;
-    padding: 12px 12px 20px 12px;
-    font-size: 25px;
+    margin: -0.75rem -0.75rem;
+    margin-bottom: 0.75rem;
+    padding: 0.75rem 0.75rem 1.25rem 0.75rem;
+    font-size: 1.5625rem;
   }
 
   &__delete-button {
     background-color: $primary-dark;
     color: $white;
-    padding: 10px;
-    margin: 12px 0;
-    margin-right: 12px;
-    border-radius: 10px;
+    padding: 0.625rem;
+    margin: 0.75rem 0;
+    margin-right: 0.75rem;
+    border-radius: 0.625rem;
     border: 1px solid $primary-dark;
     transition: 100ms ease-in-out;
     float: right;
-  
 
     &:hover {
       background-color: $white;
@@ -74,12 +73,12 @@
 
   &__exercise-count {
     color: $primary-dark;
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 
   &__hr {
     border-color: $primary-medium;
-    margin: 12px -12px;
+    margin: 0.75rem -0.75rem;
   }
 
   &__subhead {
@@ -93,17 +92,17 @@
 
   &__search {
     width: 100%;
-    height: 32px;
-    border-radius: 10px;
-    padding-left: 12px;
+    height: 2rem;
+    border-radius: 0.625rem;
+    padding-left: 0.75rem;
     border: 2px solid $primary-medium;
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
     background-image: url(../../assets/images/search.svg);
     background-repeat: no-repeat;
-    padding-left: 35px;
-    background-position: 5px 50%;
-    background-size: 20px;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding-left: 2.1875rem;
+    background-position: 0.3125rem 50%;
+    background-size: 1.25rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
     @include tablet {
       width: 45%;

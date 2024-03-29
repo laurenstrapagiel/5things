@@ -4,27 +4,26 @@
 @use "../../styles/partials/global" as *;
 
 .exercise {
-  padding: 20px;
+  padding: 1.25rem;
   min-height: 100vh;
 
   @include tablet {
-    padding: 40px 40px;
+    padding: 2.5rem 2.5rem;
   }
   @include desktop {
-    padding: 40px 100px;
+    padding: 2.5rem 6.25rem;
   }
 
   &__intro {
-    margin: 20px 0;
+    margin: 1.25rem 0;
   }
 }
 
 .form {
   border: 3px solid $primary-medium;
   border-radius: 10px;
-  padding: 12px;
-       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
+  padding: 0.75rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
   @include tablet {
     width: 80%;
@@ -41,8 +40,8 @@
   }
 
   &__radial-item {
-    margin-left: 4px;
-    margin-right: 12px;
+    margin-left: 0.25rem;
+    margin-right: 0.75rem;
   }
 
   &__submit-button,
@@ -50,10 +49,10 @@
   &__back-button {
     background-color: $primary-dark;
     color: $white;
-    padding: 10px;
-    margin: 12px 0;
-    margin-right: 12px;
-    border-radius: 10px;
+    padding: 0.625rem;
+    margin: 0.75rem 0;
+    margin-right: 0.75rem;
+    border-radius: 0.625rem;
     border: 1px solid $primary-dark;
     transition: 100ms ease-in-out;
 
@@ -70,7 +69,7 @@
 }
 
 .radio {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   accent-color: $primary-dark;
 }

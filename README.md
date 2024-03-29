@@ -48,6 +48,8 @@ For the server:
 - run `npx knex seed:run`
 - run `npm start`
 
+Once both client and server and ready and running, register your own account or login with `username: lauren` and `password: lauren` to see a sample profile.
+
 ## Implementation
 
 ### Tech Stack
