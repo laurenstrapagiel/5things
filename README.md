@@ -24,9 +24,29 @@ This app will be for anyone who struggles with anxious thoughts, whether mild or
 
 - users can create an account to be able to keep a record of all their exercise instances
 - users can review past exercises and look for patterns and improvement
+- users can search past exercises
+- users can earn badges by completing more exercises
 - app will ask user to fill in each step of the exercise in forms
 - app will ask user to rate their anxiety severity before and after doing the exercise
 - app will ask where the user is during the exercise
+
+## Installation Instructions
+
+Get this code as well as the [server repository.](https://github.com/laurenstrapagiel/5things-server)
+
+For the client:
+
+- Run `npm i`
+- Run `npm start`
+
+For the server:
+
+- Run `npm i`
+- Create a .env file following the env.example file, with a database called 5Things
+- Generate a secret_key by running `node -e "console.log(require('crypto').randomBytes(32).toString('hex'));"` and add it to the .env
+- run `npx knex migrate:latest`
+- run `npx knex seed:run`
+- run `npm start`
 
 ## Implementation
 
@@ -55,6 +75,7 @@ This app will be for anyone who struggles with anxious thoughts, whether mild or
 - Register
 - Exercise
 - User profile
+- About
 
 ### Mockups
 
@@ -82,13 +103,39 @@ This app will be for anyone who struggles with anxious thoughts, whether mild or
 
 ![](./src/assets/mockups/Exercise.png)
 
+### Screenshots
+
+#### Home Page
+
+![](./src/assets/screenshots/homepage.png)
+
+#### About Page
+
+![](./src/assets/screenshots/about.png)
+
+#### Login Page
+
+![](./src/assets/screenshots/login.png)
+
+#### Register Page
+
+![](./src/assets/screenshots/register.png)
+
+#### Profile Page
+
+![](./src/assets/screenshots/profile.png)
+
+#### Exercise Page
+
+![](./src/assets/screenshots/exercise.png)
+
 ### Data
 
-![](./src/assets/mockups/drawSQL-image-export-2024-03-17.png)
+![](./src/assets/mockups/data.png)
 
 ### Endpoints
 
-**GET /exercise**
+**GET /exercise/**
 
 - Get list of previous exercise entries
 
@@ -108,11 +155,21 @@ Response:
         "date": (timestamp),
         "location", "home",
         "rating_before": 5,
-        "see": ["one", "two", "three", "four", "five"],
-        "touch": ["one", "two", "three", "four"],
-        "hear": ["one", "two", "three"],
-        "smell": ["one", "two"],
-        "taste": ["one"],
+        "see_1": "one",
+        "see_2": "two",
+        "see_3": "three",
+        "see_4": "four",
+        "see_5", "five",
+        "touch_1": "one,"
+        "touch_2": "two",
+        "touch_3": "three",
+        "touch_4": "four",
+         "hear_1": "one",
+        "hear_2": "two",
+        "hear_3": "three",
+        "smell_1": "one",
+        "smell_2": "two",
+        "taste_1": "one",
         "rating_after": 2,
     },
     ...
@@ -134,29 +191,79 @@ Response:
 ```
 [
     {
-        "id": 1,
+         "id": 1,
         "user_id": 1,
         "date": (timestamp),
         "location", "home",
         "rating_before": 5,
-        "see": ["one", "two", "three", "four", "five"],
-        "touch": ["one", "two", "three", "four"],
-        "hear": ["one", "two", "three"],
-        "smell": ["one", "two"],
-        "taste": ["one"],
+        "see_1": "one",
+        "see_2": "two",
+        "see_3": "three",
+        "see_4": "four",
+        "see_5", "five",
+        "touch_1": "one,"
+        "touch_2": "two",
+        "touch_3": "three",
+        "touch_4": "four",
+         "hear_1": "one",
+        "hear_2": "two",
+        "hear_3": "three",
+        "smell_1": "one",
+        "smell_2": "two",
+        "taste_1": "one",
         "rating_after": 2,
     },
     ...
 ]
 ```
 
-**POST /users/register**
+**GET /profile**
+
+- See user details
+- See user's part exericses
+
+Parameters:
+
+- user's id
+
+Response:
+
+```
+[
+    {
+        "id": 1,
+        "username": lauren,
+        "date": (timestamp),
+        "location", "home",
+        "rating_before": 5,
+        "see_1": "one",
+        "see_2": "two",
+        "see_3": "three",
+        "see_4": "four",
+        "see_5", "five",
+        "touch_1": "one,"
+        "touch_2": "two",
+        "touch_3": "three",
+        "touch_4": "four",
+         "hear_1": "one",
+        "hear_2": "two",
+        "hear_3": "three",
+        "smell_1": "one",
+        "smell_2": "two",
+        "taste_1": "one",
+        "rating_after": 2,
+    },
+    ...
+]
+```
+
+**POST /register**
 
 - Add a user account
 
 Parameters:
 
-- email: User's email
+- username: user's username
 - password: User's provided password
 
 Response:
@@ -167,13 +274,13 @@ Response:
 }
 ```
 
-**POST /users/login**
+**POST /login**
 
 - Login a user
 
 Parameters:
 
-- email: User's email
+- username: User's username
 - password: User's provided password
 
 Response:
@@ -187,9 +294,9 @@ Response:
 ### Auth
 
 - JWT auth
-    - will start with fake user account before adding auth for testing
-    - store JWT in local storage, remove when user logs out
-    - user profile will have a message to sign in if not already
+  - will start with fake user account before adding auth for testing
+  - store JWT in local storage, remove when user logs out
+  - user profile will have a message to sign in if not already
 
 ## Roadmap
 
@@ -238,12 +345,11 @@ Response:
 
 - DEMO DAY
 
-## Nice-to-haves
+## Future additions
 
 - forgot password function
 - custom graphics for displaying exercise data
 - additional page that delivers endpoint of randon mindfulness exercise as a quick version of exercise
 - add additional notes or thoughts to exercise
-- filter/sort through past exercises
 - use CSS animations to create a box breathing exercise
 - light/dark mode toggle
