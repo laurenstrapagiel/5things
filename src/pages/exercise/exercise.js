@@ -71,11 +71,15 @@ function Exercise() {
         throw new Error("User not authenticated");
       }
 
-      await axios.post("http://localhost:8080/exercises", formData, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      await axios.post(
+        "https://things5-6d22dee75a3a.herokuapp.com/exercises",
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       navigate("/profile");
     } catch (error) {
       setErrorMessage("Error submitting form. Please try again.");

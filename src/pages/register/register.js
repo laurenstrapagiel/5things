@@ -31,7 +31,7 @@ function Register() {
         return;
       }
 
-      await axios.post("http://localhost:8080/register", {
+      await axios.post("https://things5-6d22dee75a3a.herokuapp.com/register", {
         username: formData.username,
         password: formData.password,
       });

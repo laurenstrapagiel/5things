@@ -39,7 +39,7 @@ function Profile() {
     }
 
     axios
-      .get("http://localhost:8080/profile", {
+      .get("https://things5-6d22dee75a3a.herokuapp.com/profile", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

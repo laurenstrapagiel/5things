@@ -32,10 +32,13 @@ function Login() {
         return;
       }
 
-      const response = await axios.post("http://localhost:8080/login", {
-        username: e.target.username.value,
-        password: e.target.password.value,
-      });
+      const response = await axios.post(
+        "https://things5-6d22dee75a3a.herokuapp.com/login",
+        {
+          username: e.target.username.value,
+          password: e.target.password.value,
+        }
+      );
 
       sessionStorage.setItem("token", response.data.token);
       setErrorMessage(null);

@@ -9,11 +9,14 @@ function DeleteModal({ exerciseId, isOpen, onCancel, onConfirm }) {
   const deleteExercise = async () => {
     try {
       const token = sessionStorage.getItem("token");
-      await axios.delete(`http://localhost:8080/exercises/${exerciseId}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      await axios.delete(
+        `https://things5-6d22dee75a3a.herokuapp.com/${exerciseId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       onConfirm();
     } catch (error) {
       console.error("Error deleting exercise:", error);
