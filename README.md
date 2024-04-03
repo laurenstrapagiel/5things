@@ -32,7 +32,7 @@ This app will be for anyone who struggles with anxious thoughts, whether mild or
 
 ## Installation Instructions
 
-UPDATE AS of APR. 3, 2024: The frontend now points to Heroku. You can simply run the
+UPDATE AS of APR. 3, 2024: The frontend now points to Heroku. You can simply run this repo to get the site going, or visit 5Things.ca
 
 Previous instructions below:
 
