@@ -1,6 +1,6 @@
 # Project Title
 
-5 Things
+[5Things](https://www.5things.ca).
 
 ## Overview
 
@@ -31,6 +31,10 @@ This app will be for anyone who struggles with anxious thoughts, whether mild or
 - app will ask where the user is during the exercise
 
 ## Installation Instructions
+
+UPDATE AS of APR. 3, 2024: The frontend now points to Heroku. You can simply run the
+
+Previous instructions below:
 
 Get this code as well as the [server repository.](https://github.com/laurenstrapagiel/5things-server)
 
